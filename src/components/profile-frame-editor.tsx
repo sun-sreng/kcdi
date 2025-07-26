@@ -1,7 +1,7 @@
 "use client"
 
 import { useCallback, useEffect, useRef, useState } from "react"
-import { Download, Upload } from "lucide-react"
+import { Download, ImageIcon, Upload } from "lucide-react"
 
 // shadcn/ui components
 import { Button } from "@gmana/react/button"
@@ -198,8 +198,7 @@ const CanvasEditor = ({
           />
           {!userImage && (
             <div className="text-muted-foreground pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
-              <Upload size={48} className="mb-3 opacity-50" />
-              <p className="font-medium">Upload an image to start</p>
+              <ImageIcon size={48} className="mb-3 opacity-50" />
             </div>
           )}
         </div>
