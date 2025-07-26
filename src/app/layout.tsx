@@ -51,7 +51,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
-        <GoogleTagManager gtmId="G-RBK6PRFVHZ" />
+        <GoogleTagManager
+          gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID!}
+        />
       </body>
     </html>
   )
