@@ -1,6 +1,7 @@
 import { PropsWithChildren } from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+import { GoogleTagManager } from "@next/third-parties/google"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -50,6 +51,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
+        <GoogleTagManager gtmId="G-RBK6PRFVHZ" />
       </body>
     </html>
   )
