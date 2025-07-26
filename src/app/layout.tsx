@@ -1,6 +1,8 @@
 import { PropsWithChildren } from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { ThemeProvider } from "@gmana/react/theme-provider"
 import { cn } from "@gmana/utils"
@@ -46,6 +48,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
           <main className="min-h-screen py-14">{children}</main>
           <SiteFooter />
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
